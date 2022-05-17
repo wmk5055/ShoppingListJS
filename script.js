@@ -58,11 +58,17 @@ function deleteListElement(event){
 
 }
 
+function handleULClick(event){
+    deleteListElement(event);
+    markListElementDone(event);
+}
+
 
 buttonEnter.addEventListener("click",addListAfterClick);
 
 inputTxtBox.addEventListener("keypress", addListAfterKeyPress);
 
-ul.addEventListener("click",markListElementDone);
+// ul.addEventListener("click",markListElementDone);
 
-ul.addEventListener("click",deleteListElement);
+// ul.addEventListener("click",deleteListElement);
+ul.addEventListener("click",handleULClick);
